@@ -15,18 +15,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bettsina Walkinson</title>
-    <link rel="icon" type="image/x-icon" href="/imgs/favicon.png">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <script src="https://kit.fontawesome.com/8a8386615c.js" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script src="https://player.vimeo.com/api/player.js"></script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <script defer src="https://analytics.eu.umami.is/script.js" data-website-id="4617b7fb-2ca9-49fc-819a-7b361ac9db82"></script>
+
+    <script src="image.js"></script>
 </head>
 
 <body>
@@ -35,53 +35,87 @@
     <div class="topnav">
         <div class="topnav_left">
             <div class="topnav_item">
-                <h4><a href="https://bettsinawalks.com/">Bettsina Walkinson</a></h4>
+                <img src="images/bwalksthumb.png">
+                <a href="index.html">Bettsina Walkinson</a>
             </div>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
         <div class="topnav_right">
             <div class="topnav_item">
-                <a href="about_bettsina_walkinson.html">About</i></a>
-                <a href="https://www.linkedin.com/in/bettsinawalks/">LinkedIn</i></a>
+                <a href="about_bettsina_walkinson.html">About</a>
+                <a href="https://www.linkedin.com/in/bettsinawalks/">LinkedIn</a>
             </div>
         </div>
     </div>
 
-
-
     <!--content-->
-    <section class="flex_column">
-        <div class="content">
-            <p>Hi 👋🏼, I'm Bettsina, a multi-disciplinary designer, previously at Apple.</p>    
-            <p>When I'm not working you can find me in Azeroth or watching an F1 race.</p>
-        </div>
-
-        <div class="content">
-            <h4>Selected Work</h4>
-            <p><a href="manzana.html">App Store Connect & TestFlight</a> • Apple</p>
-            <p><a href="blockchain_explorer.html">Cryptocurrency Explorer</a> • Blockchain.com</p>
-            <p><a href="cfi_student_dashboard.html">Student Dashboard</a> • Corporate Finance Institute</p>
-            <p><a href="cfi_design_system.html">Design System</a> • Corporate Finance Institute</p>        
-        </div>
-
-        <div class="content">
-            <h4>Motion</h4>
-            <p><a href="https://www.skillshare.com/en/classes/Motion-Graphics-for-UI-Designers-using-Principle-for-Mac/1130580736">Motion Graphics for UI Designers Class</a> • Skillshare</p>
-            <p><a href="https://vimeo.com/182510943">Motion Graphics Reel</a> • Various Clients</p>
-        </div>
-
-        <div class="content">
-            <h4>Experiments</h4>
-            <p><a href="https://www.rddl.xyz/">rddl</a> • Generative Motion Project (WIP)</p>
-            <p><a href="https://opensea.io/collection/ffffaces">ffffaces</a> • NFT Collection</p>
-            <p><a href="https://soundcloud.com/bettsinawalks">music</a> • Piano Melodies</p>
+    <section class="content">
+         <div class="flex_column">
+            <h1>Staff product designer at Robin AI.</h1>
+            <h2>With over ten years of experience, I'm a design generalist who can tackle micro-interactions in a design system or craft end-to-end experiences across platforms.</h2>
         </div>
     </section>
 
-    <section class="flex_column">
-        <div class="content">
-            <p>© 2024 • Bettsina Walkinson • Bettsinawalks </p>
+    <section class="content">
+        <div class="flex_column">
+            <h3><i class="fa-solid fa-arrow-down"></i> Selected work</h3> 
+            <img src="images/tf.png">
+            <p>TestFlight for Vision Pro at Apple</p>
+            <br>
         </div>
     </section>
+
+    <section class="content">
+        <div class="flex_column">
+            <img src="images/connectapp.png">
+            <p>App Store Connect app at Apple</p>
+            <br>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="flex_column">
+            <img src="images/cryptoweb.png">
+            <p>Crypto explorer at Blockchain.com</p>
+            <br>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="flex_column">
+            <img src="images/dashboard.png">
+            <p>Student platform at corporatefinanceinstitute.com</p>
+            <br>
+        </div>
+    </section>
+
+    <!--footer-->
+    <section class="content">
+        <div class="flex_column">
+            <p>© 2025 • Bettsina Walkinson  • Bettsinawalks </p>
+        </div>
+    </section>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.topnav_right');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.topnav_right a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 
 </body>
 </html>
